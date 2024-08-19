@@ -117,7 +117,7 @@ function ProfilePage() {
               <div className="absolute right-0">
                 <Button
                   buttonType="outline"
-                  onButtonClick={() => navigate("/profile/create-trip")}
+                  onButtonClick={() => navigate("/create-trip")}
                 >
                   Create a new Trip
                 </Button>
