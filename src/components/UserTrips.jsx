@@ -12,11 +12,22 @@ export const UserTrips = ({ trips }) => {
               className="flex w-full gap-10 rounded-lg bg-slate-50 shadow-lg p-8"
             >
               <div className="w-max">
-                <img
-                  className="object-cover rounded-xl w-full md:w-52 md:h-52 h-full border-2 border-solid border-slate-600"
-                  src={`${trip.owner.profileImage}`}
-                  alt="profile image"
-                />
+                if(trip.owner.profileImage)
+                {
+                  <img
+                    className="object-cover rounded-xl w-full md:w-52 md:h-52 h-full"
+                    src={`${trip.owner.profileImage}`}
+                    alt="profile image"
+                  />
+                }
+                else
+                {
+                  <img
+                    className="object-cover rounded-xl w-full md:w-52 md:h-52 h-full"
+                    src={`https://ui-avatars.com/api/?name=${trip.owner.name}&background=random&rounded=true`}
+                    alt="profile image"
+                  />
+                }
                 <div className="mt-4 flex justify-center">
                   <UserStatus isOnline={true}>
                     {trip.owner.name}, {trip.owner.age}

@@ -48,15 +48,15 @@ function ProfilePage() {
   //     console.log(trips);
   //   }
   // }, [formState, userInfo.userName, userInfo.userAge, userInfo.profileImage]);
-  // const handleUserInfoUpdate = (info) => {
-  //   setUserInformation((prevData) => ({
-  //     ...prevData,
-  //     ...info,
-  //     languages: [info.languages],
-  //   }));
+  const handleUserInfoUpdate = (info) => {
+    setUserInformation((prevData) => ({
+      ...prevData,
+      ...info,
+      languages: [info.languages],
+    }));
 
-  //   setIsEditProfile(false);
-  // };
+    setIsEditProfile(false);
+  };
 
   const handleSetUserImages = (newImage) => {
     setUserImages((prevImages) => [
