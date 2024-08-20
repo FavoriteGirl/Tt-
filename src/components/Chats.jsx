@@ -109,9 +109,9 @@ export const Chats = () => {
           isCollapsed ? "h-0 md:h-0 md:min-h-0" : "h-100 md:h-96 md:min-h-96"
         }`}
       >
-        {users.map((user) => {
+        {users.map((user, index) => {
           return (
-            <div key={user.id} className="p-4 flex gap-4">
+            <div key={index} className="p-4 flex gap-4">
               <div className="w-14 h-14 relative">
                 <img
                   src={user.profileImage}

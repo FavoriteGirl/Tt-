@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-import ChooseFileButton from "../../components/ChooseFileButton";
 import Select from "../../components/Select";
 import TextInput from "../../components/TextInput";
 import { Button } from "../../components/Button";

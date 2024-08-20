@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import UserImages from "../../components/UserImages";
 import { Button } from "../../components/Button";
 import { UserStatus } from "../../components/UserStatus";
@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 
 import UpdatePersonalInfo from "../../components/updatePersonalInfo";
 import { Chats } from "../../components/Chats";
+import { Header } from "../../components/Header";
 
 function ProfilePage() {
   const location = useLocation();
@@ -67,20 +68,7 @@ function ProfilePage() {
     <>
       <div className="bg-gray-100 h-screen w-screen flex flex-col items-center">
         {/* Header */}
-        <header className="bg-black text-white w-screen p-4 flex justify-between items-center">
-          <div className="flex items-center space-x-4">
-            <div className="text-orange-500 text-2xl font-bold">TravelTwin</div>
-            <nav className="hidden md:flex space-x-4">
-              <a href="#" className="hover:underline">
-                Find a Travel Companion
-              </a>
-              <a href="#" className="hover:underline">
-                Invite Travelers
-              </a>
-            </nav>
-          </div>
-          <div></div>
-        </header>
+        <Header />
 
         <div className="w-full min-w-full h-full flex flex-col items-center px-4 overflow-x-hidden overflow-y-auto">
           <div className="grow p-4 w-full md:p-8 md:max-w-screen-lg flex flex-col gap-3.5">
