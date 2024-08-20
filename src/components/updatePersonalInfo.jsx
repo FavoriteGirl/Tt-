@@ -24,7 +24,7 @@ export default function updatePersonalInfo({
     <div className="flex flex-col gap-4">
       <div className="w-full">
         <TextInput
-          fieldName="About"
+          fieldName="about"
           placeholder={userInfo.about}
           type="textarea"
           onChange={handleInputChange}

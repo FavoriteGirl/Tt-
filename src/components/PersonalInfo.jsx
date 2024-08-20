@@ -1,8 +1,3 @@
-import { useState } from "react";
-import TextInput from "./TextInput";
-import Select from "./Select";
-import { Button } from "./Button";
-
 export const PersonalInfo = ({ userData }) => {
   return (
     <>

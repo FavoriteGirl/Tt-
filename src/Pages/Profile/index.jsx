@@ -54,6 +54,7 @@ function ProfilePage() {
       ...info,
       languages: [info.languages],
     }));
+    console.log(info);
 
     setIsEditProfile(false);
   };
@@ -113,6 +114,7 @@ function ProfilePage() {
                       city: userInfo.city,
                       relationshipStatus: userInfo.relationshipStatus,
                       languages: userInfo.languages,
+                      about: userInfo.about,
                     }}
                     updateUserInfo={handleUserInfoUpdate}
                     cancle={() => setIsEditProfile(false)}
