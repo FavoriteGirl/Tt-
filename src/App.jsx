@@ -6,6 +6,7 @@ import Profile from "./Pages/Profile";
 import ForgotPassword from "./Pages/ForgotPassword/compon/ForgotPassword";
 import CreateTrip from "./Pages/CreateTrip";
 import TravelCompanion from "./Pages/TravelCompanion";
+import { InviteTraveler } from "./Pages/InviteTraveler";
 
 function App() {
   const router = createBrowserRouter([
@@ -36,6 +37,10 @@ function App() {
     {
       path: "travel-companion",
       element: <TravelCompanion />,
+    },
+    {
+      path: "invite-travelers",
+      element: <InviteTraveler />,
     },
   ]);
 

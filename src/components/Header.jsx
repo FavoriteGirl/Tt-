@@ -12,7 +12,7 @@ export const Header = () => {
           <a href="travel-companion" className="hover:underline">
             Find a Travel Companion
           </a>
-          <a href="#" className="hover:underline">
+          <a href="invite-travelers" className="hover:underline">
             Invite Travelers
           </a>
         </nav>
