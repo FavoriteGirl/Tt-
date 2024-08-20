@@ -4,8 +4,10 @@ export default function TextInput({ fieldName, onChange, type, placeholder }) {
   if (type === "textarea") {
     return (
       <textarea
-        className="textarea textarea-bordered h-32 col-span-3 focus:outline-none"
+        required
+        className="textarea textarea-bordered h-32 col-span-3 focus:outline-none w-full"
         placeholder={placeholder}
+        onChange={(e) => onChange(fieldName, e.target.value)}
       ></textarea>
     );
   }
