@@ -43,12 +43,22 @@ export const Chats = () => {
   const handleIsCollapsChange = () => {
     setIsCollapsed(!isCollapsed);
   };
-  const HandleMessageSubmit = (e) => {
-    e.preventDefault();
+  const HandleMessageSubmit = (event) => {
+    event.preventDefault();
+    setIsMessage(false);
+  };
+
+  const HandleCloseMessage = (event) => {
+    event.preventDefault();
     setIsMessage(false);
   };
   if (isMessage) {
-    return <Message HandleMessageSubmit={HandleMessageSubmit} />;
+    return (
+      <Message
+        HandleMessageSubmit={HandleMessageSubmit}
+        HandleCloseMessage={HandleCloseMessage}
+      />
+    );
   }
   return (
     <div className="bg-white w-full h-40 md:w-96 md:h-max rounded-xl shadow-md fixed bottom-4 right-4">
@@ -123,17 +133,24 @@ export const Chats = () => {
   );
 };
 
-const Message = (HandleMessageSubmit) => {
+const Message = ({ HandleMessageSubmit, HandleCloseMessage }) => {
   return (
     <div className="w-full h-full bg-opacity-55 bg-slate-700 z-50 absolute top-0 flex justify-center items-center p-8">
-      <div className="w-96 p-6 bg-slate-200 rounded-xl">
-        <form>
+      <div className="w-96 p-6 pt-8 bg-slate-200 rounded-xl absolute">
+        <button
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+          onClick={HandleCloseMessage}
+        >
+          ✖
+        </button>
+        <form onSubmit={HandleMessageSubmit}>
           <textarea
+            required={true}
             className="w-full h-40 bg-white rounded-lg p-4 focus:outline-none"
             placeholder="Type your message here"
           ></textarea>
           <div className="flex justify-center mt-4">
-            <Button onButtonClick={HandleMessageSubmit}>Send Message</Button>
+            <Button>Send Message</Button>
           </div>
         </form>
       </div>
