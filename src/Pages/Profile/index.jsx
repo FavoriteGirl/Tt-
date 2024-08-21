@@ -158,14 +158,14 @@ function ProfilePage() {
               </div>
             </div>
             {/* Profile Section */}
-            <div className="bg-white shadow-md rounded-lg p-6 flex flex-col gap-6 items-center">
+            {/* <div className="bg-white shadow-md rounded-lg p-6 flex flex-col gap-6 items-center">
               <div className="w-full flex justify-center relative">
                 <h1 className="w-max font-extrabold border-solid border-b-4 border-b-primary px-4 pb-2">
                   MY TRIPS
                 </h1>
               </div>
               <UserTrips trips={trips} />
-            </div>
+            </div> */}
           </div>
         </div>
         <Chats />

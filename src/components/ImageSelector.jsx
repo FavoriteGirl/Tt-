@@ -48,7 +48,7 @@ const ImageSelector = ({ imageId, imageName, setImage, userImages }) => {
     <>
       <label
         htmlFor="imageSelector"
-        className="bg-slate-100  w-32 h-32 rounded-xl flex items-center justify-center text-orange-500 cursor-pointer"
+        className="bg-primary bg-opacity-5 w-32 h-32 rounded-xl flex items-center justify-center text-orange-500 cursor-pointer"
       >
         <svg
           width="41"
